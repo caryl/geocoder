@@ -30,7 +30,8 @@ module Geocoder
         :nominatim,
         :mapquest,
         :ovi,
-        :test
+        :test,
+        :baidu
       ]
     end
 
