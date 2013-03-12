@@ -36,7 +36,7 @@ module Geocoder::Lookup
 
     def query_url_params(query)
       {
-        (query.reverse_geocode? ? :location : :address) => query,
+        (query.reverse_geocode? ? :location : :address) => query.sanitized_text,
         :language => configuration.language,
         :output => 'json',
         :key => configuration.api_key
